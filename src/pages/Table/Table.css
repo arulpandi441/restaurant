@@ -1,0 +1,248 @@
+/* ===== GLOBAL ===== */
+.booking-page {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff6f0, #ffe0d2);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* ===== HERO SECTION ===== */
+.booking-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../../assets/images/background.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.booking-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.booking-hero p {
+    font-size: 1.2rem;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    margin: 30px 0 15px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* ===== TABLE TYPES ===== */
+.table-types {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* GLASS CARD */
+.table-card {
+    width: 220px;
+    height: 120px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* gradient border effect */
+.table-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+}
+
+.table-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* hover */
+.table-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* active selection */
+.table-card.active {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+}
+
+/* ===== FORM ===== */
+.booking-form {
+    width: 40%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* inputs */
+.booking-form input,
+.booking-form textarea {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.booking-form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* button */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    animation: scaleUp 0.4s ease;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* tablet */
+@media (max-width: 992px) {
+    .booking-form {
+        width: 70%;
+    }
+
+    .booking-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .booking-form {
+        width: 90%;
+    }
+
+    .booking-hero {
+        height: 50vh;
+    }
+
+    .booking-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .booking-hero p {
+        font-size: 1rem;
+    }
+
+    .table-card {
+        width: 150px;
+        height: 90px;
+    }
+
+    .table-card h3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* small mobile */
+@media (max-width: 400px) {
+    .table-types {
+        flex-direction: column;
+        align-items: center;
+    }
+}

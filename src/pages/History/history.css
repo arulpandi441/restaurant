@@ -1,0 +1,10 @@
+.history-page{
+  padding:20px;
+  height: 100vh;
+}
+
+.order-box{
+  border:1px solid gray;
+  padding:10px;
+  margin-bottom:15px;
+}

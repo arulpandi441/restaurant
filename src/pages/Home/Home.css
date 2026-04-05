@@ -1,0 +1,174 @@
+/* Global */
+.home {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #fff8f0, #ffe4d6);
+}
+
+/* HERO SECTION */
+.home-hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../../assets/images/background.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-hero h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.home-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.home-hero button {
+    padding: 12px 30px;
+    border: none;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.home-hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* MENU SECTION */
+.home-menu-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.home-menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* TABS */
+.home-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.home-tabs button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.home-tabs button:hover {
+    background: #ff512f;
+    color: white;
+}
+
+.home-tabs .active {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+}
+
+/* SLIDER GRID */
+.home-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* CARD DESIGN */
+.home-card {
+    background: rgba(255,255,255,0.2);
+    min-height: 280px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.home-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.home-card h3 {
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* HOVER EFFECT */
+.home-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.home-card:hover img {
+    transform: scale(1.1);
+}
+
+/* OFFER BANNER */
+.offer {
+    margin: 50px 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    border-radius: 15px;
+    animation: glow 2s infinite alternate;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ff512f;
+    }
+    to {
+        box-shadow: 0 0 25px #dd2476;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home-hero h1 {
+        font-size: 2rem;
+    }
+
+    .home-hero p {
+        font-size: 1rem;
+    }
+}
